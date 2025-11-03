@@ -1,5 +1,38 @@
-<custom_message>
-  <image_attachment url="haveamoment.png"/>
-  <action_on_view>
-    <vibrate duration_ms="10000"/> </action_on_view>
-</custom_message>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrate and Display Image</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <img src="haveamoment.png" alt="Have a Moment">
+    <script>
+        // Function to vibrate the device
+        function vibrateDevice() {
+            if (navigator.vibrate) {
+                navigator.vibrate(15000); // Vibrate for 15 seconds (15000 milliseconds)
+            } else {
+                console.log("Vibration API not supported");
+            }
+        }
+
+        // Call the vibration function when the page loads
+        window.onload = vibrateDevice;
+    </script>
+</body>
+</html>
