@@ -1,0 +1,5 @@
+<custom_message>
+  <image_attachment url="haveamoment.png"/>
+  <action_on_view>
+    <vibrate duration_ms="10000"/> </action_on_view>
+</custom_message>
